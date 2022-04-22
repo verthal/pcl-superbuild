@@ -14,7 +14,7 @@ make_pcl_framework ()
   pcl_device_libs=`find $install/pcl-ios-device $install/flann-ios-device -name *.a`
   # pcl_sim_libs=`find $install/pcl-ios-simulator $install/flann-ios-simulator $install/boost-ios-simulator -name *.a`
 
-  pcl_header_dir=$install/pcl-ios-device/include/pcl-1.8
+  pcl_header_dir=$install/pcl-ios-device/include/pcl-1.11
   boost_header_dir=$install/boost-ios-device/include
   eigen_header_dir=$install/eigen
 
