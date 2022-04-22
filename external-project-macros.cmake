@@ -42,7 +42,7 @@ endmacro()
 # Eigen fetch and install
 #
 macro(install_eigen)
-    set(eigen_url https://bitbucket.org/eigen/eigen/get/3.3.4.tar.gz)
+    set(eigen_url https://gitlab.com/libeigen/eigen/-/archive/3.3.4/eigen-3.3.4.tar.bz2)
   # set(eigen_url http://www.vtk.org/files/support/eigen-3.1.0-alpha1.tar.gz)
   # set(eigen_md5 c04dedf4ae97b055b6dd2aaa01daf5e9)
   ExternalProject_Add(
@@ -65,7 +65,7 @@ macro(fetch_vtk)
   ExternalProject_Add(
     vtk-fetch
     SOURCE_DIR ${source_prefix}/vtk
-    GIT_REPOSITORY git://github.com/patmarion/VTK.git
+    GIT_REPOSITORY https://github.com/verthal/VTK.git
     GIT_TAG ce4a267
     CONFIGURE_COMMAND ""
     BUILD_COMMAND ""
@@ -124,7 +124,7 @@ macro(fetch_flann)
   ExternalProject_Add(
     flann-fetch
     SOURCE_DIR ${source_prefix}/flann
-    GIT_REPOSITORY git://github.com/mariusmuja/flann
+    GIT_REPOSITORY https://github.com/verthal/flann
     GIT_TAG 1.9.1
     CONFIGURE_COMMAND ""
     BUILD_COMMAND ""
@@ -164,7 +164,8 @@ macro(fetch_boost)
   ExternalProject_Add(
     boost-fetch
     SOURCE_DIR ${source_prefix}/boost
-    GIT_REPOSITORY git://github.com/linuxfreakus/boost-cmake
+    GIT_REPOSITORY https://github.com/verthal/boost-cmake.git
+
     GIT_TAG origin/master
     CONFIGURE_COMMAND ""
     BUILD_COMMAND ""
@@ -203,7 +204,7 @@ macro(fetch_pcl)
   ExternalProject_Add(
     pcl-fetch
     SOURCE_DIR ${source_prefix}/pcl
-    GIT_REPOSITORY git://github.com/PointCloudLibrary/pcl.git
+    GIT_REPOSITORY https://github.com/PointCloudLibrary/pcl.git
     GIT_TAG pcl-1.11.1
     CONFIGURE_COMMAND ""
     BUILD_COMMAND ""
